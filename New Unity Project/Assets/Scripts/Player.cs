@@ -5,6 +5,14 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
+    public static bool up;
+    public static bool down;
+    public static bool left;
+    public static bool right;
+
+    bool tiro;
+    public static bool espada = true;
+
     Animator anim;
 
 	// Use this for initialization
@@ -22,6 +30,49 @@ public class Player : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveY * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * moveSpeed, GetComponent<Rigidbody2D>().velocity.x);
 
+        if (moveX > 0)
+        {
+            right = true;
+
+            up = false;
+            down = false;
+            left = false;
+        }
+
+        if (moveX < 0)
+        {
+            left = true;
+
+            up = false;
+            down = false;
+            right = false;
+        }
+
+        if (moveY > 0)
+        {
+            up = true;
+
+            down = false;
+            right = false;
+            left = false;
+        }
+
+        if (moveY < 0)
+        {
+            down = true;
+
+            up = false;
+            right = false;
+            left = false;
+        }
+
+        if (tiro)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                print("tiro");
+            }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
