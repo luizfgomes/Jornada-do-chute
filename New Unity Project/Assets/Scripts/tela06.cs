@@ -3,10 +3,13 @@ using System.Collections;
 
 public class tela06 : MonoBehaviour
 {
-    public static bool isTela06 = true;
+    public GameObject player;
 
-	// Use this for initialization
-	void Start ()
+    public static bool isTela06 = true;
+    public static bool from5;
+
+    // Use this for initialization
+    void Start ()
     {
 	
 	}

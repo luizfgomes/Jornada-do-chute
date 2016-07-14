@@ -82,6 +82,11 @@ public class Player : MonoBehaviour
             if (tela01A.isTela01A)
             {
                 Application.LoadLevel(2);
+
+                tela01A.from1A = true;
+
+                tela01B.from1B = false;
+                tela03.from3 = false;
             }
         }
 
@@ -90,6 +95,11 @@ public class Player : MonoBehaviour
             if (tela01B.isTela01B)
             {
                 Application.LoadLevel(2);
+
+                tela01B.from1B = true;
+
+                tela01A.from1A = false;
+                tela03.from3 = false;
             }
         }
 
@@ -98,6 +108,7 @@ public class Player : MonoBehaviour
             if (tela02.isTela02)
             {
                 Application.LoadLevel(0);
+                tela02.from2 = true;
             }
         }
 
@@ -106,6 +117,11 @@ public class Player : MonoBehaviour
             if (tela03.isTela03)
             {
                 Application.LoadLevel(2);
+
+                tela03.from3 = true;
+
+                tela01A.from1A = false;
+                tela01B.from1B = false;
             }
         }
 

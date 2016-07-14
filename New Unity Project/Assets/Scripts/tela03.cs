@@ -3,10 +3,16 @@ using System.Collections;
 
 public class tela03 : MonoBehaviour
 {
-    public static bool isTela03 = true;
+    public GameObject player;
 
-	// Use this for initialization
-	void Start ()
+    public Vector2 playerFrom2;
+    public Vector2 playerFrom4;
+
+    public static bool isTela03 = true;
+    public static bool from3;
+
+    // Use this for initialization
+    void Start ()
     {
 	
 	}
